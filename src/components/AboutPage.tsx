@@ -44,34 +44,8 @@ export function AboutPage() {
 
       <section>
         <h2>Author</h2>
-        <p>Nabil-Fareed Alikhan</p>
-        <div className="about-links">
-          <a href="https://happykhan.com" target="_blank" rel="noopener noreferrer">
-            happykhan.com
-          </a>
-          <a
-            href="https://orcid.org/0000-0002-4465-174X"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ORCID
-          </a>
-          <a href="mailto:nabil@happykhan.com">Email</a>
-          <a
-            href="https://twitter.com/happykhan"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Twitter
-          </a>
-          <a
-            href="https://genomic.social/@happykhan"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Mastodon
-          </a>
-        </div>
+        <h3>Andrew J. Page</h3>
+        <p className="about-role">CTO, Origin Sciences</p>
       </section>
     </div>
   )
