@@ -37,7 +37,7 @@ export function SnpDensityChart({ densityData }: SnpDensityChartProps) {
             formatter={(value: number) => [value, 'SNPs']}
             labelFormatter={(label: number) => `Window start: ${label}`}
           />
-          <Bar dataKey="density" fill="#0d9488" />
+          <Bar dataKey="density" fill="var(--gx-accent)" />
         </BarChart>
       </ResponsiveContainer>
     </section>

@@ -4,6 +4,8 @@
 
 snp-sitesx is a privacy-first, client-side web tool that replicates the functionality of [snp-sites](https://github.com/sanger-pathogens/snp-sites) by Sanger Pathogens. Extract SNP sites from multi-FASTA alignments with interactive visualisations — no data leaves your machine.
 
+Live app: [snp-sitesx.genomicx.org](https://snp-sitesx.genomicx.org)
+
 ## Features
 
 - **VCF, Phylip, and SNP-FASTA export** — same outputs as the snp-sites CLI
@@ -30,6 +32,18 @@ npm run dev       # Start dev server
 npm run test      # Run unit tests
 npm run check     # Type-check + lint + build
 ```
+
+## Hosting
+
+Cloudflare Pages publishes `dist` using Node 24. To deploy this direct-upload project:
+
+```bash
+npm install
+npm run check
+npx wrangler pages deploy dist --project-name snp-sitesx --branch main
+```
+The app has no server, workers, WASM assets or required environment secrets.
+Its interface uses `@genomicx/ui` 0.10.1 with bundled IBM Plex fonts.
 
 ## Tech
 

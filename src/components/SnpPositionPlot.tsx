@@ -43,7 +43,7 @@ export function SnpPositionPlot({ snpSites, allSites }: SnpPositionPlotProps) {
               name === 'x' ? [value, 'Position'] : [value, name]
             }
           />
-          <Scatter data={data} fill="#0d9488" />
+          <Scatter data={data} fill="var(--gx-accent)" />
         </ScatterChart>
       </ResponsiveContainer>
     </section>

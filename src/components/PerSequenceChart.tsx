@@ -35,7 +35,7 @@ export function PerSequenceChart({ variantCounts }: PerSequenceChartProps) {
             formatter={(value: number) => [value, 'Variants']}
             labelFormatter={(label: string) => `Sequence: ${label}`}
           />
-          <Bar dataKey="count" fill="#0d9488" />
+          <Bar dataKey="count" fill="var(--gx-accent)" />
         </BarChart>
       </ResponsiveContainer>
     </section>

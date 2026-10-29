@@ -50,14 +50,10 @@ export function PairwiseHeatmap({ pairwiseDistances, sequences }: PairwiseHeatma
   }
 
   function cellColor(seq1: string, seq2: string): string {
-    if (seq1 === seq2) return '#e2e8f0'
+    if (seq1 === seq2) return 'var(--gx-border)'
     const dist = distMap[seq1]?.[seq2] ?? 0
     const opacity = maxDistance > 0 ? dist / maxDistance : 0
-    // Interpolate white → #0d9488
-    const r = Math.round(255 + (13 - 255) * opacity)
-    const g = Math.round(255 + (148 - 255) * opacity)
-    const b = Math.round(255 + (136 - 255) * opacity)
-    return `rgb(${r},${g},${b})`
+    return `color-mix(in srgb, var(--gx-accent) ${opacity * 100}%, var(--gx-surface))`
   }
 
   const showNumbers = N <= 20
@@ -142,13 +138,15 @@ export function PairwiseHeatmap({ pairwiseDistances, sequences }: PairwiseHeatma
                     key={`cell-${rowName}-${colName}`}
                     style={{
                       backgroundColor: bg,
+                      color: dist !== undefined && maxDistance > 0 && dist / maxDistance > 0.5
+                        ? 'var(--gx-text-inverted)' : 'var(--gx-text)',
                       width: cellSize,
                       height: cellSize,
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
                       fontSize: 10,
-                      border: '1px solid #f1f5f9',
+                      border: '1px solid var(--gx-border)',
                       boxSizing: 'border-box',
                     }}
                     title={

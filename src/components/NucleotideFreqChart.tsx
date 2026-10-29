@@ -15,11 +15,11 @@ export interface NucleotideFreqChartProps {
 }
 
 const BASE_COLORS: Record<string, string> = {
-  A: '#0d9488',
-  T: '#06b6d4',
-  G: '#6366f1',
-  C: '#f59e0b',
-  other: '#94a3b8',
+  A: 'var(--gx-accent)',
+  T: 'var(--gx-info)',
+  G: 'var(--gx-indigo)',
+  C: 'var(--gx-warning)',
+  other: 'var(--gx-text-muted)',
 }
 
 const BASES = ['A', 'T', 'G', 'C', 'other'] as const
@@ -99,7 +99,7 @@ export function NucleotideFreqChart({ snpSites }: NucleotideFreqChartProps) {
   return (
     <section className="chart-section">
       <h3>Nucleotide Frequencies at SNP Sites</h3>
-      <p style={{ fontSize: '0.85rem', color: 'var(--gx-muted, #64748b)', marginBottom: '0.5rem' }}>
+      <p style={{ fontSize: '0.85rem', color: 'var(--gx-text-muted)', marginBottom: '0.5rem' }}>
         Aggregated totals across {snpSites.length} SNP sites
       </p>
       <ResponsiveContainer width="100%" height={220}>

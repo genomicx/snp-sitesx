@@ -5,13 +5,13 @@
   "type": "module",
   "license": "GPL-3.0-only",
   "author": "Nabil-Fareed Alikhan <nabil@happykhan.com> (https://www.happykhan.com)",
-  "homepage": "https://snp-sitesx.vercel.app",
+  "homepage": "https://snp-sitesx.genomicx.org",
   "repository": {
     "type": "git",
-    "url": "https://github.com/happykhan/snp-sitesx.git"
+    "url": "https://github.com/genomicx/snp-sitesx.git"
   },
   "bugs": {
-    "url": "https://github.com/happykhan/snp-sitesx/issues"
+    "url": "https://github.com/genomicx/snp-sitesx/issues"
   },
   "keywords": [
     "snp-sitesx",
@@ -31,10 +31,11 @@
     "check": "vitest run && eslint . && npm run build"
   },
   "dependencies": {
+    "@genomicx/ui": "0.10.1",
+    "file-saver": "^2.0.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "recharts": "^2.13.3",
-    "file-saver": "^2.0.5"
+    "recharts": "^2.13.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
