@@ -644,3 +644,6 @@
 .log-body { background: var(--gx-code-bg); }
 /* Keep the original tab height with the bundled font's metrics. */
 .tab { line-height: 17px; }
+.recharts-text { fill: var(--gx-text-muted); }
+.recharts-cartesian-axis-line, .recharts-cartesian-axis-tick-line,
+.recharts-cartesian-grid line { stroke: var(--gx-border); }
